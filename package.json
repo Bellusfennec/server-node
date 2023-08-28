@@ -1,0 +1,19 @@
+{
+  "name": "server-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "javascript"
+  ],
+  "author": "Niyaz Zaytcev <bellusfennec@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@types/yargs": "^17.0.24",
+    "yargs": "^17.7.2"
+  }
+}
