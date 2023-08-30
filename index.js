@@ -1,6 +1,6 @@
 const yargs = require("yargs");
 const pkg = require("./package.json");
-const { addNote, printNote } = require("./notes.controller");
+const { addNote, printNote, removeNote } = require("./notes.controller");
 
 yargs.version(pkg.version);
 
@@ -13,6 +13,17 @@ yargs.command({
   handler({ title }) {
     addNote(title);
     console.log("Add command", title);
+  },
+});
+
+yargs.command({
+  command: "remove",
+  describe: "Remove note form list",
+  builder: {
+    id: { type: "string", describe: "Note id", demandOption: true },
+  },
+  handler({ id }) {
+    removeNote(id);
   },
 });
 
