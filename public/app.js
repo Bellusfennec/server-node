@@ -19,5 +19,11 @@ async function remove(id) {
   await fetch(`/${id}`, { method: "DELETE" });
 }
 async function update({ id, title }) {
-  await fetch(`/${id}/${title}`, { method: "PUT" });
+  await fetch("/", {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json;charset=utf-8",
+    },
+    body: JSON.stringify({ id, title }),
+  });
 }
